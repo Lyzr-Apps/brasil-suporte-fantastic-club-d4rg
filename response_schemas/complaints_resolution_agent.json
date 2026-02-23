@@ -1,0 +1,47 @@
+{
+  "agent_name": "Complaints Resolution Agent",
+  "agent_id": "699c9a6d948869a40a159ef8",
+  "agent_type": "json",
+  "accessor": "json",
+  "has_module_outputs": false,
+  "is_manager": false,
+  "managed_agents": [],
+  "response_schema": {
+    "type": "json_schema",
+    "json_schema": {
+      "name": "AgentResponse",
+      "strict": true,
+      "schema": {
+        "type": "object",
+        "properties": {
+          "response": {
+            "type": "string",
+            "description": "The complete response message in Portuguese"
+          },
+          "severity": {
+            "type": "string",
+            "description": "Issue severity: LOW, MEDIUM, or HIGH"
+          },
+          "complaint_summary": {
+            "type": "string",
+            "description": "Summary of the customer complaint"
+          },
+          "resolution_offered": {
+            "type": "string",
+            "description": "The resolution option offered (refund/replacement/store_credit)"
+          },
+          "resolution_details": {
+            "type": "string",
+            "description": "Detailed resolution plan"
+          },
+          "requires_escalation": {
+            "type": "boolean",
+            "description": "Whether this issue needs to be escalated to human support"
+          }
+        },
+        "required": ["response", "severity", "complaint_summary", "resolution_offered", "resolution_details", "requires_escalation"],
+        "additionalProperties": false
+      }
+    }
+  }
+}

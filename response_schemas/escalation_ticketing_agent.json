@@ -1,0 +1,47 @@
+{
+  "agent_name": "Escalation & Ticketing Agent",
+  "agent_id": "699c9a8111e6cd83af25388b",
+  "agent_type": "json",
+  "accessor": "json",
+  "has_module_outputs": false,
+  "is_manager": false,
+  "managed_agents": [],
+  "response_schema": {
+    "type": "json_schema",
+    "json_schema": {
+      "name": "AgentResponse",
+      "strict": true,
+      "schema": {
+        "type": "object",
+        "properties": {
+          "response": {
+            "type": "string",
+            "description": "The complete response message in Portuguese"
+          },
+          "ticket_id": {
+            "type": "string",
+            "description": "The HubSpot ticket ID or reference number"
+          },
+          "priority": {
+            "type": "string",
+            "description": "Ticket priority: URGENT, HIGH, MEDIUM, or LOW"
+          },
+          "summary": {
+            "type": "string",
+            "description": "Comprehensive summary of the escalated issue"
+          },
+          "estimated_response_time": {
+            "type": "string",
+            "description": "Expected time for human agent response"
+          },
+          "customer_message": {
+            "type": "string",
+            "description": "Message to relay to the customer about the escalation"
+          }
+        },
+        "required": ["response", "ticket_id", "priority", "summary", "estimated_response_time", "customer_message"],
+        "additionalProperties": false
+      }
+    }
+  }
+}

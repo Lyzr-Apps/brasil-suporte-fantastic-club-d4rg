@@ -1,0 +1,43 @@
+{
+  "app_name": "BrazilCare - Ecommerce Customer Service Tool",
+  "pattern": "manager-subagent",
+  "manager_agent": {
+    "name": "Customer Service Coordinator",
+    "agent_id": "699c9a94084d446e34561959",
+    "is_manager": true,
+    "managed_agents": [
+      "699c9a6d11e6cd83af253887",
+      "699c9a6d948869a40a159ef8",
+      "699c9a8111e6cd83af25388b"
+    ]
+  },
+  "sub_agents": [
+    {
+      "name": "Returns Processing Agent",
+      "agent_id": "699c9a6d11e6cd83af253887",
+      "has_knowledge_base": true
+    },
+    {
+      "name": "Complaints Resolution Agent",
+      "agent_id": "699c9a6d948869a40a159ef8",
+      "has_knowledge_base": true
+    },
+    {
+      "name": "Escalation & Ticketing Agent",
+      "agent_id": "699c9a8111e6cd83af25388b",
+      "has_knowledge_base": false,
+      "tools": ["HUBSPOT_CREATE_TICKET"]
+    }
+  ],
+  "knowledge_base": {
+    "rag_id": "699c9a44b45a5c2df18d8e03",
+    "rag_name": "brazilcarepoliciespskt",
+    "description": "Knowledge base containing return policies, refund procedures, complaint handling guidelines, compensation rules, and FAQ documentation for BrazilCare ecommerce customer service"
+  },
+  "agent_map": {
+    "Customer Service Coordinator": "699c9a94084d446e34561959",
+    "Returns Processing Agent": "699c9a6d11e6cd83af253887",
+    "Complaints Resolution Agent": "699c9a6d948869a40a159ef8",
+    "Escalation & Ticketing Agent": "699c9a8111e6cd83af25388b"
+  }
+}

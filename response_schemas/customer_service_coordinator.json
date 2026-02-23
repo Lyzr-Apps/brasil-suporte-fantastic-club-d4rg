@@ -1,0 +1,43 @@
+{
+  "agent_name": "Customer Service Coordinator",
+  "agent_id": "699c9a94084d446e34561959",
+  "agent_type": "json",
+  "accessor": "json",
+  "has_module_outputs": false,
+  "is_manager": true,
+  "managed_agents": [
+    "699c9a6d11e6cd83af253887",
+    "699c9a6d948869a40a159ef8",
+    "699c9a8111e6cd83af25388b"
+  ],
+  "response_schema": {
+    "type": "json_schema",
+    "json_schema": {
+      "name": "AgentResponse",
+      "strict": true,
+      "schema": {
+        "type": "object",
+        "properties": {
+          "response": {
+            "type": "string",
+            "description": "The complete final response message in Portuguese to show the customer"
+          },
+          "intent_classified": {
+            "type": "string",
+            "description": "The classified intent: RETURN, COMPLAINT, INQUIRY, or ESCALATION"
+          },
+          "agent_used": {
+            "type": "string",
+            "description": "Which sub-agent was used to handle this request"
+          },
+          "resolution_status": {
+            "type": "string",
+            "description": "Status of the resolution: resolved, pending, escalated, needs_info"
+          }
+        },
+        "required": ["response", "intent_classified", "agent_used", "resolution_status"],
+        "additionalProperties": false
+      }
+    }
+  }
+}

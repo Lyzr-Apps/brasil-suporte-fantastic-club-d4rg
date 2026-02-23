@@ -1,0 +1,47 @@
+{
+  "agent_name": "Returns Processing Agent",
+  "agent_id": "699c9a6d11e6cd83af253887",
+  "agent_type": "json",
+  "accessor": "json",
+  "has_module_outputs": false,
+  "is_manager": false,
+  "managed_agents": [],
+  "response_schema": {
+    "type": "json_schema",
+    "json_schema": {
+      "name": "AgentResponse",
+      "strict": true,
+      "schema": {
+        "type": "object",
+        "properties": {
+          "response": {
+            "type": "string",
+            "description": "The complete response message in Portuguese"
+          },
+          "status": {
+            "type": "string",
+            "description": "Return status: eligible, not_eligible, or needs_info"
+          },
+          "order_id": {
+            "type": "string",
+            "description": "The order ID being processed"
+          },
+          "return_instructions": {
+            "type": "string",
+            "description": "Step by step return instructions if eligible"
+          },
+          "timeline": {
+            "type": "string",
+            "description": "Expected timeline for the return/refund process"
+          },
+          "next_steps": {
+            "type": "string",
+            "description": "What the customer should do next"
+          }
+        },
+        "required": ["response", "status", "order_id", "return_instructions", "timeline", "next_steps"],
+        "additionalProperties": false
+      }
+    }
+  }
+}

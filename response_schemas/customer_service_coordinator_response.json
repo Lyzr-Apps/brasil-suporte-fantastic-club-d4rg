@@ -1,0 +1,20 @@
+{
+  "agent_name": "Customer Service Coordinator",
+  "agent_id": "699c9a94084d446e34561959",
+  "description": "Classifies customer intent (return/complaint/inquiry), routes to appropriate sub-agent, aggregates responses, and delivers final answer in Portuguese",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "response": "string",
+    "intent_classified": "string",
+    "agent_used": "string",
+    "resolution_status": "string"
+  },
+  "example_response": {
+    "response": "The complete final response message in Portuguese to show the customer",
+    "intent_classified": "The classified intent: RETURN, COMPLAINT, INQUIRY, or ESCALATION",
+    "agent_used": "Which sub-agent was used to handle this request",
+    "resolution_status": "Status of the resolution: resolved, pending, escalated, needs_info"
+  }
+}
